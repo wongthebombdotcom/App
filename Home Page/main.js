@@ -11,4 +11,3 @@ $.getJSON( airtable_list_url, function( data ) {
   });
   $(".list-view").append(items.join(''));
 });
-
