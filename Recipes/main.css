@@ -11,3 +11,12 @@
 #navitem{
     padding-right:1%
 }
+
+body{
+    padding-top:10%;
+    padding-left:5%;
+    padding-right:5%;
+}
+#button{
+    width:40%;
+}
