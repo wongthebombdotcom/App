@@ -26,7 +26,7 @@ var listView = function(id, name, image, description) {
 // Get and display the data for all items
 var getDataForList = function() {
   // 1. Gets the data from the Airtable API
-  $.getJSON(`https://api.airtable.com/v0/appzuVq4QVRYlpDfV/Chicken%20Recipes?api_key=key87Kh1djUSEKJz9`, function( data ) {
+  $.getJSON(`https://api.airtable.com/v0/appzuVq4QVRYlpDfV/Chicken%20Recipes?api_key=${api_key}&view=alpha`, function( data ) {
     // console.log(data.records);
     var html = [];
     html.push(`<div class="row">`);
@@ -77,16 +77,16 @@ var getDataForId = function(id) {
       var id = record.id;
       var fields = record.fields;
       var name = fields["Name"];
-      var pictureUrl = fields["Pictures"] ? fields["Pictures"][0].url : '';
+      var image = fields["Image"] ? fields["Image"][0].url : '';
       var description = fields["Description"];
       var ingredients = fields["Ingredients"];
       var recipe = fields["Recipe"];
       var source = fields["Source"];
 
-      var itemHTML = detailView(id, name, pictureUrl, description, ingredients, recipe, source);
+      var itemHTML = detailView(id, name, image, description, ingredients, recipe, source);
       html.push(itemHTML);
-    html.push(`</div>`);
-    $(".detail-view").append(html.join(""));
+      html.push(`</div>`);
+     $(".detail-view").append(html.join(""));
   });
 }
 
