@@ -28,9 +28,12 @@ html,
 body {
   height: 100%;
   background-image:url("https://4.imimg.com/data4/WX/CT/MY-8854554/live-chicken-500x500.jpg");
-  background-size:35%;
+  background-size:33%;
   background-position:center;
   background-repeat:no-repeat;
+}
+#bottom {
+  background-image:url(https://www.maangchi.com/wp-content/uploads/2018/02/roasted-chicken-1.jpg);
 }
 body {
   color: black;
@@ -180,5 +183,9 @@ body {
 }
 
 h1{
-    font-size:50px;
+    font-size:80px;
+}
+
+.cover-heading{
+  color:orangered;
 }
