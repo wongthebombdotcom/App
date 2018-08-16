@@ -49,18 +49,19 @@ var getDataForList = function() {
 
 // Template that generates HTML for one item in our detail view, given the parameters passed in
 var detailView = function(id, name, pictureUrl, description, ingredients, recipe, source) {
-  return `<div class="col-sm-12">
+  return `<div class="col-sm-14">
     <div class="card mb-4 box-shadow">
       <img class="card-img-top" src="${pictureUrl}">
       <div class="card-body">
         <h2>${name}</h2>
         <p class="card-text">${description}</p>
         <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">${ingredients}</small>
-          <small class="text-muted">${recipe}</small>
+          <small class="text-muted" id="ingredients">${ingredients}</small>
+          <small id="recipe">${recipe}</small>
         </div>
-        ${source ? `<a href="${source}">${source}</a>`: ``}
+         Original Source: ${source ? `<a href="${source}">${source}</a>`: ``}
         <hr/>
+        <a class="btn btn-secondary" href="recipe.html" role="button">Cook Some More</a>
       </div>
     </div>
   </div>`;
