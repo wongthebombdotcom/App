@@ -56,7 +56,7 @@ var detailView = function(id, name, pictureUrl, description, ingredients, recipe
         <h2>${name}</h2>
         <p class="card-text">${description}</p>
         <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted" id="ingredients">${ingredients}</small>
+          <small class="text-muted, w-75" id="ingredients">${ingredients}</small>
           <small id="recipe">${recipe}</small>
         </div>
          Original Source: ${source ? `<a href="${source}">${source}</a>`: ``}
